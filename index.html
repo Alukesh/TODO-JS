@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<section class="todo" id="section">
+    <div class="todo__content">
+        <h1 class="todo__title">TodoList</h1>
+        <div class="todo__header">
+            <h4>Status : <span class="todo__status">All</span></h4>
+            <h3 class="todo__time"></h3>
+        </div>
+
+        <form class="todo__form">
+            <input MAXLENGTH="18" class="todo__input text" type="text" placeholder="Todo text">
+            <button class="todo__btn add" type="submit">ADD</button>
+        </form>
+        <h2 class="todo__empty"></h2>
+
+        <ol class="todo__list">
+<!--                <li class="todo__item">-->
+<!--                    <span class="todo__item-title">Название задачи</span>-->
+<!--                    <div class="todo__item-btns">-->
+<!--                        <button class="todo__item-btn done">Done</button>-->
+<!--                        <button class="todo__item-btn important">Important</button>-->
+<!--                        <button class="todo__item-btn delete removeBtn">Delete</button>-->
+<!--                    </div>-->
+<!--                </li>-->
+        </ol>
+
+        <div class="todo__footer">
+            <p class="todo__count">Todo count : <span class="todo__count-num"></span></p>
+            <div class="todo__footer-btns">
+                <button class="status__btn status__all" style="background-color:aquamarine;">All</button>
+                <button class="status__btn status__important" style="background-color:indianred;">Important</button>
+                <button class="status__btn status__done" style="background-color: silver;">Done</button>
+            </div>
+        </div>
+        <button class="status__btn delete-all">Delete all</button>
+
+
+
+
+    </div>
+</section>
+
+<script src="vanta/three.min.js"></script>
+<script src="vanta/vanta.rings.min.js"></script>
+<script>
+    VANTA.RINGS({
+        el: "#section",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        speed: 0.90,
+        backgroundColor: 0x4f7daa,
+        color: 0x0
+    })
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>
